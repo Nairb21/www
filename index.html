@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Hueca – Comedor Universitario: menú semanal, desayuno estudiantil, horarios de atención y pedidos.">
+  <title>La Hueca – Comedor Universitario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ ENCABEZADO Y NAVEGACIÓN ============ -->
+  <header class="encabezado">
+    <div class="contenedor encabezado__fila">
+      <a class="logo" href="#inicio" aria-label="La Hueca, ir al inicio">
+        <span class="logo__icono" aria-hidden="true">🍽️</span>
+        <span class="logo__texto">
+          <strong>La Hueca</strong>
+          <small>Comedor Universitario</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#menu">Menú semanal</a></li>
+          <li><a href="#desayuno">Desayuno</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#proyecto">Proyecto UX</a></li>
+        </ul>
+        <a class="boton boton--nav" href="#pedido">Hacer pedido</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ INICIO ============ -->
+    <section id="inicio" class="hero">
+      <div class="contenedor hero__grid">
+        <div class="hero__texto">
+          <span class="etiqueta">Comedor universitario</span>
+          <h1>Come bien entre clases, <span class="resaltado">sin perder tiempo.</span></h1>
+          <p>En La Hueca consultas el menú de la semana, revisas el desayuno estudiantil y los horarios, y preparas tu pedido para retirarlo a la hora que te convenga.</p>
+          <div class="hero__acciones">
+            <a class="boton" href="#pedido">Realizar un pedido →</a>
+            <a class="boton boton--borde" href="#menu">Ver menú de hoy</a>
+          </div>
+        </div>
+
+        <aside class="accesos" aria-labelledby="titulo-accesos">
+          <h2 id="titulo-accesos" class="accesos__titulo">Accesos rápidos</h2>
+          <ul class="accesos__lista">
+            <li><a href="#menu"><span aria-hidden="true">📅</span><span><strong>Menú de la semana</strong><small>Lunes a viernes</small></span></a></li>
+            <li><a href="#desayuno"><span aria-hidden="true">☕</span><span><strong>Desayuno estudiantil</strong><small>Menú fijo todos los días</small></span></a></li>
+            <li><a href="#horarios"><span aria-hidden="true">🕒</span><span><strong>Horarios de atención</strong><small>Desayuno, almuerzo y retiro</small></span></a></li>
+            <li><a href="#pedido"><span aria-hidden="true">🛍️</span><span><strong>Realizar un pedido</strong><small>Elige plato y hora de retiro</small></span></a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ MENÚ SEMANAL (pestañas con :target, sin JavaScript) ============ -->
+    <section id="menu" class="seccion">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <span class="etiqueta">Menú semanal</span>
+          <h2>¿Qué hay para comer esta semana?</h2>
+          <p>Elige un día para ver sus platos.</p>
+        </header>
+
+        <div class="menu">
+          <nav class="pestanas" aria-label="Días de la semana">
+            <a href="#lunes" class="pestana pestana--lunes">Lunes<small>Lun</small></a>
+            <a href="#martes" class="pestana pestana--martes">Martes<small>Mar</small></a>
+            <a href="#miercoles" class="pestana pestana--miercoles">Miércoles<small>Mié</small></a>
+            <a href="#jueves" class="pestana pestana--jueves">Jueves<small>Jue</small></a>
+            <a href="#viernes" class="pestana pestana--viernes">Viernes<small>Vie</small></a>
+          </nav>
+
+          <!-- El lunes va al final para mostrarse por defecto (regla :target ~ #lunes) -->
+          <article id="martes" class="dia">
+            <h3>Menú del martes</h3>
+            <div class="platos">
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍲</span><div><span class="plato__tipo">Sopa</span><h4>Locro de papa</h4><p>Con queso fresco y aguacate.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍛</span><div><span class="plato__tipo">Plato fuerte</span><h4>Seco de pollo</h4><p>Arroz amarillo y maduro frito.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥗</span><div><span class="plato__tipo">Vegetariano</span><h4>Menestra de lenteja</h4><p>Arroz, patacones y ensalada.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥤</span><div><span class="plato__tipo">Bebida y postre</span><h4>Jugo de mora</h4><p>Gelatina de frutas.</p></div></div>
+            </div>
+          </article>
+
+          <article id="miercoles" class="dia">
+            <h3>Menú del miércoles</h3>
+            <div class="platos">
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍲</span><div><span class="plato__tipo">Sopa</span><h4>Sopa de quinua</h4><p>Con verduras y hierbas.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🐟</span><div><span class="plato__tipo">Plato fuerte</span><h4>Filete de pescado</h4><p>Arroz, menestra y ensalada.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍝</span><div><span class="plato__tipo">Vegetariano</span><h4>Pasta primavera</h4><p>Salsa de tomate y vegetales.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥤</span><div><span class="plato__tipo">Bebida y postre</span><h4>Jugo de maracuyá</h4><p>Fruta de temporada.</p></div></div>
+            </div>
+          </article>
+
+          <article id="jueves" class="dia">
+            <h3>Menú del jueves</h3>
+            <div class="platos">
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍲</span><div><span class="plato__tipo">Sopa</span><h4>Crema de zapallo</h4><p>Con crutones.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥩</span><div><span class="plato__tipo">Plato fuerte</span><h4>Carne asada</h4><p>Arroz, menestra de fréjol y patacones.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🌯</span><div><span class="plato__tipo">Vegetariano</span><h4>Wrap de vegetales</h4><p>Hummus y ensalada fresca.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥤</span><div><span class="plato__tipo">Bebida y postre</span><h4>Limonada</h4><p>Arroz con leche.</p></div></div>
+            </div>
+          </article>
+
+          <article id="viernes" class="dia">
+            <h3>Menú del viernes</h3>
+            <div class="platos">
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍲</span><div><span class="plato__tipo">Sopa</span><h4>Encebollado</h4><p>Con chifles y limón.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍗</span><div><span class="plato__tipo">Plato fuerte</span><h4>Pollo al horno</h4><p>Puré de papa y vegetales.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🫑</span><div><span class="plato__tipo">Vegetariano</span><h4>Arroz con vegetales</h4><p>Huevo frito y maduro.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥤</span><div><span class="plato__tipo">Bebida y postre</span><h4>Jugo de naranja</h4><p>Torta de chocolate.</p></div></div>
+            </div>
+          </article>
+
+          <article id="lunes" class="dia dia--defecto">
+            <h3>Menú del lunes <span class="chip">Por defecto</span></h3>
+            <div class="platos">
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍲</span><div><span class="plato__tipo">Sopa</span><h4>Crema de zapallo</h4><p>Con crutones y queso.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🍗</span><div><span class="plato__tipo">Plato fuerte</span><h4>Pollo al jugo</h4><p>Arroz, menestra y ensalada.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥗</span><div><span class="plato__tipo">Vegetariano</span><h4>Tortilla de verduras</h4><p>Arroz integral y ensalada fresca.</p></div></div>
+              <div class="plato"><span class="plato__icono" aria-hidden="true">🥤</span><div><span class="plato__tipo">Bebida y postre</span><h4>Jugo de naranjilla</h4><p>Fruta picada.</p></div></div>
+            </div>
+          </article>
+        </div>
+        <p class="nota">Los platos son contenido de ejemplo y deben reemplazarse por el menú real del comedor.</p>
+      </div>
+    </section>
+
+    <!-- ============ DESAYUNO + HORARIOS ============ -->
+    <div class="contenedor dos-columnas">
+      <section id="desayuno" class="tarjeta tarjeta--oscura">
+        <span class="etiqueta etiqueta--solida">Menú fijo</span>
+        <h2>Desayuno estudiantil</h2>
+        <p>Un desayuno fijo y completo para empezar la jornada.</p>
+        <ul class="desayuno__lista">
+          <li><span aria-hidden="true">☕</span> Café, té o chocolate</li>
+          <li><span aria-hidden="true">🥐</span> Pan o tostadas</li>
+          <li><span aria-hidden="true">🍳</span> Huevos revueltos</li>
+          <li><span aria-hidden="true">🍉</span> Porción de fruta</li>
+        </ul>
+      </section>
+
+      <section id="horarios" class="tarjeta">
+        <h2>Horarios de atención</h2>
+        <p class="texto-suave">De lunes a viernes</p>
+        <table class="horarios">
+          <caption class="oculto">Horarios de atención del comedor</caption>
+          <tbody>
+            <tr><th scope="row">🌅 Desayuno</th><td>07:00 – 09:30</td></tr>
+            <tr><th scope="row">🍛 Almuerzo</th><td>12:00 – 15:00</td></tr>
+            <tr><th scope="row">🛍️ Retiro de pedidos</th><td>12:00 – 15:00</td></tr>
+            <tr><th scope="row">Sábados y domingos</th><td class="cerrado">Cerrado</td></tr>
+          </tbody>
+        </table>
+        <p class="aviso">Consulta los horarios antes de realizar tu pedido.</p>
+      </section>
+    </div>
+
+    <!-- ============ LLAMADA A LA ACCIÓN ============ -->
+    <section class="contenedor">
+      <div class="cta">
+        <div>
+          <h2>¿Ya sabes qué vas a comer?</h2>
+          <p>Completa el formulario y elige tu hora de retiro.</p>
+        </div>
+        <a class="boton boton--blanco" href="#pedido">Ir a pedidos →</a>
+      </div>
+    </section>
+
+    <!-- ============ PEDIDOS ============ -->
+    <section id="pedido" class="seccion seccion--clara">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <span class="etiqueta">Pedidos</span>
+          <h2>Realizar un pedido</h2>
+          <p>Completa tus datos y elige tu comida a la hora que elijas. Los campos con <span class="obligatorio">*</span> son obligatorios.</p>
+        </header>
+
+        <div class="pedido">
+          <form class="formulario" action="#pedido" method="get">
+            <fieldset class="bloque">
+              <legend><span class="numero">1</span> Datos personales</legend>
+              <div class="campo">
+                <label for="nombre">Nombre completo <span class="obligatorio">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Nombre Apellido" autocomplete="name" required>
+              </div>
+              <div class="campo">
+                <label for="correo">Correo electrónico <span class="obligatorio">*</span></label>
+                <input type="email" id="correo" name="correo" placeholder="usuario@universidad.edu" autocomplete="email" required>
+              </div>
+            </fieldset>
+
+            <fieldset class="bloque">
+              <legend><span class="numero">2</span> Información del pedido</legend>
+              <div class="campo">
+                <label for="plato">Selecciona el plato <span class="obligatorio">*</span></label>
+                <select id="plato" name="plato" required>
+                  <option value="">— Elige una opción —</option>
+                  <option>Desayuno estudiantil</option>
+                  <option>Almuerzo del día – plato fuerte</option>
+                  <option>Almuerzo del día – vegetariano</option>
+                  <option>Solo sopa del día</option>
+                </select>
+              </div>
+              <div class="campo-doble">
+                <div class="campo">
+                  <label for="cantidad">Cantidad <span class="obligatorio">*</span></label>
+                  <input type="number" id="cantidad" name="cantidad" min="1" max="5" value="1" required>
+                </div>
+                <div class="campo">
+                  <label for="hora">Hora de retiro <span class="obligatorio">*</span></label>
+                  <input type="time" id="hora" name="hora" min="12:00" max="15:00" required>
+                </div>
+              </div>
+              <div class="campo">
+                <label for="observaciones">Observaciones del pedido</label>
+                <textarea id="observaciones" name="observaciones" rows="3" placeholder="Ej. sin cebolla, porción pequeña…"></textarea>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="boton boton--ancho">Enviar pedido</button>
+            <p class="nota">Este formulario es una maqueta: no envía ni procesa pedidos en un servidor.</p>
+          </form>
+
+          <aside class="lateral">
+            <div class="tarjeta">
+              <h3>¿Cómo funciona?</h3>
+              <ol class="pasos">
+                <li>Escribe tu nombre y correo.</li>
+                <li>Elige el plato y la cantidad.</li>
+                <li>Indica la hora de retiro.</li>
+                <li>Retira tu pedido sin hacer fila.</li>
+              </ol>
+            </div>
+            <div class="tarjeta tarjeta--naranja">
+              <h3>Horario de retiro</h3>
+              <p><strong>12:00 – 15:00</strong><br>Lunes a viernes</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROYECTO UX (contenido del informe) ============ -->
+    <section id="proyecto" class="seccion">
+      <div class="contenedor">
+        <header class="seccion__cabecera">
+          <span class="etiqueta">Proyecto UX · Grupo 3</span>
+          <h2>Cómo diseñamos La Hueca</h2>
+          <p>Resumen del informe "El Simulador UX": User Persona, Card Sorting, arquitectura de información y regla de los 3 clics.</p>
+        </header>
+
+        <div class="ux-grid">
+          <article class="tarjeta">
+            <h3>🎯 Propósito</h3>
+            <p>Facilitar la consulta rápida de la oferta del comedor y la organización de los pedidos, para que el estudiante planifique su comida dentro de una jornada con poco tiempo libre.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>⚠️ Problema</h3>
+            <p>Sin un canal centralizado, el estudiante no sabe qué hay de comer, confunde los horarios y termina haciendo filas en las horas de mayor demanda.</p>
+          </article>
+          <article class="tarjeta">
+            <h3>👤 Usuario</h3>
+            <p>Estudiante universitario con clases presenciales y poco tiempo entre ellas, que accede principalmente desde su celular <em>(perfil provisional, por validar con el User Persona)</em>.</p>
+          </article>
+        </div>
+
+        <h3 class="subtitulo">Necesidades y soluciones</h3>
+        <div class="tabla-scroll">
+          <table class="tabla">
+            <thead>
+              <tr><th scope="col">Característica</th><th scope="col">Necesidad</th><th scope="col">Solución en La Hueca</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Poco tiempo entre clases</td><td>Consultar el menú en segundos</td><td>Menú semanal con pestañas Lunes–Viernes</td></tr>
+              <tr><td>Planifica según su horario</td><td>Saber cuándo atiende el comedor</td><td>Sección de horarios a un clic</td></tr>
+              <tr><td>Come temprano</td><td>Conocer el desayuno</td><td>Tarjeta "Desayuno estudiantil"</td></tr>
+              <tr><td>Quiere evitar filas</td><td>Preparar su pedido con anticipación</td><td>Formulario con plato, cantidad y hora de retiro</td></tr>
+              <tr><td>Indicaciones particulares</td><td>Comunicar detalles</td><td>Campo "Observaciones del pedido"</td></tr>
+              <tr><td>Usa el celular</td><td>Consultar y pedir desde el móvil</td><td>Diseño responsive de una columna</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="subtitulo">Card Sorting abierto: 16 tarjetas → 4 categorías</h3>
+        <div class="card-sorting">
+          <div class="categoria">
+            <h4>Inicio</h4>
+            <ul><li>Página de inicio</li><li>Presentación del comedor</li></ul>
+          </div>
+          <div class="categoria">
+            <h4>Menú</h4>
+            <ul><li>Menú de la semana</li><li>Menú del lunes</li><li>Menú del martes</li><li>Menú del miércoles</li><li>Menú del jueves</li><li>Menú del viernes</li><li>Desayuno estudiantil</li></ul>
+          </div>
+          <div class="categoria">
+            <h4>Horarios</h4>
+            <ul><li>Horarios de atención</li></ul>
+          </div>
+          <div class="categoria">
+            <h4>Pedidos</h4>
+            <ul><li>Realizar un pedido</li><li>Datos personales</li><li>Seleccionar un plato</li><li>Cantidad del pedido</li><li>Hora de retiro</li><li>Observaciones del pedido</li></ul>
+          </div>
+        </div>
+        <p class="nota">Heurística de Nielsen #6 aplicada: reconocimiento antes que recuerdo, con nombres cotidianos para el estudiante.</p>
+
+        <h3 class="subtitulo">Regla de los 3 clics</h3>
+        <ul class="clics">
+          <li><span>Ver la presentación del comedor</span><b>1 clic</b></li>
+          <li><span>Consultar el menú de hoy</span><b>2 clics</b></li>
+          <li><span>Ver el desayuno estudiantil</span><b>1 clic</b></li>
+          <li><span>Consultar los horarios</span><b>1 clic</b></li>
+          <li><span>Abrir el formulario de pedido</span><b>1 clic</b></li>
+          <li><span>Enviar el pedido completo</span><b>3 clics</b></li>
+        </ul>
+
+        <h3 class="subtitulo">Conclusiones</h3>
+        <ol class="conclusiones">
+          <li>El User Persona orienta las decisiones: se priorizó el menú, los horarios y el acceso a pedidos.</li>
+          <li>El Card Sorting redujo 16 tarjetas a 4 categorías con nombres cotidianos.</li>
+          <li>La arquitectura respeta la estructura real del sitio y todas las tareas se cumplen en 3 clics o menos.</li>
+          <li>La propuesta se construye solo con HTML5 y CSS3, sin JavaScript (pestañas con <code>:target</code>).</li>
+        </ol>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="pie">
+    <div class="contenedor pie__fila">
+      <p>© La Hueca – Comedor Universitario · Grupo 3</p>
+      <p>Bryan Carranza · Curso P1205 · Desarrollo Web Front End UX/UI</p>
+    </div>
+  </footer>
+
+</body>
+</html>
